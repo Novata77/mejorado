@@ -1,0 +1,81 @@
+
+<template name="main">
+
+
+  <nav class="white" role="navigation">
+    <div class="nav-wrapper container">
+      <a id="logo-container" href="/" class="brand-logo">Home</a>
+      <ul class="right hide-on-med-and-down">
+        {{#if currentUser}}
+          <li><a href="#" id="logout">Salir {{username}}</a></li>
+        {{else}}
+          <li><a href="#" id="login">Iniciar</a></li>  
+        {{/if}}
+      </ul>
+
+      <ul id="nav-mobile" class="side-nav">
+
+      {{#if currentUser}}
+          <li><a href="#" id="logout">Salir {{username}}</a></li>
+        {{else}}
+          <li><a href="#" id="login">Entrar</a></li>  
+        {{/if}}
+
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">Menu</i></a>
+    </div>
+  </nav>
+
+  <div class="row"> 
+    {{>mainloggin}}
+  </div>
+
+  <div id="index-banner" class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <br><br>
+        <h1 class="header center green-text text-lighten-2">TU ERES UN DESARROLLADOR </h1>
+        <div class="row center">
+          <h5 class="header col s12 light">Estos cursos son para ti</h5>
+        </div>
+        <div class="row center">
+          <a href="#" class="btn-large waves-effect waves-light  blue-grey lighten-5"></a>
+        </div>
+        <br><br>
+
+      </div>
+    </div>
+    <div class="parallax"><img src="principal.jpg" alt="Unsplashed background img 1"></div>
+  </div>
+
+
+  <main>
+    {{>Template.dynamic template=content}}
+  </main>
+
+  <footer class="page-footer teal">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">isabel ayarachi</h5>
+          <p class="grey-text text-lighten-4"> soy una estudiante universitaria trabajando en este proyecto como si fuera mi trabajo a tiempo completo.</p>
+
+
+        </div>
+        <div class="col l3 s12">
+          <h5 class="white-text">Ajustes</h5>
+          <ul>
+            <li><a class="white-text" href="#!">Link 1</a></li>
+            <li><a class="white-text" href="#!">Link 2</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      isabel <a class="brown-text text-lighten-3" href="#">Mi proyecto</a>
+      </div>
+    </div>
+  </footer>
+
+</template>
